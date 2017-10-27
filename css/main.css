@@ -100,7 +100,7 @@ a{
 .news{
 	grid-column: 5 / span 4;
     grid-row: 25 / span 1;
-	font-size: .9vmax;
+	font-size: 1vmax;
 	font-weight: 300;
 	font-family: 'Raleway', sans-serif;
 	color: #fff;
@@ -108,10 +108,45 @@ a{
 }
 
 .newsdate{
-	
-	font-size: .9vmax;
+    
+	font-size: 1vmax;
 	font-weight: 700;
+}
 
+.news_details{
+	grid-column: 5 / span 4;
+    grid-row: 26 / span 1;
+    display: none;
+	
+}
+
+.news_scroll{
+    position: fixed;
+	overflow-y: scroll;
+    font-size: .9vmax;
+	font-weight: 600;
+	font-family: 'Raleway', sans-serif;
+	color: #37003c;
+    background-color: #fff;
+	text-align: left;
+    padding: 1vmax 1vmax 1vmax 1vmax;
+    /*display: none;*/
+    opacity: .8;
+    width: 40%;
+    margin-left: 1.5%;
+    height: 48%;
+}
+
+#style-3::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #fff;
+    opacity: 0.8;
+}
+
+#style-3::-webkit-scrollbar-thumb
+{
+	background-color: #371e3e;
 }
 
 /*A PROPOS*/
