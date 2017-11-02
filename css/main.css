@@ -110,7 +110,6 @@ a{
 .newsdate{
     
 	font-size: 1vmax;
-<<<<<<< HEAD
 	font-weight: 700;	
 }
 
@@ -121,18 +120,6 @@ a{
 	
 }
 
-=======
-	font-weight: 700;
-}
-
-.news_details{
-	grid-column: 5 / span 4;
-    grid-row: 26 / span 1;
-    display: none;
-	
-}
-
->>>>>>> origin/gh-pages
 .news_scroll{
     position: fixed;
 	overflow-y: scroll;
@@ -474,19 +461,12 @@ li {
 
 .projets_photos_1, .projets_photos_2, .projets_photos_3, .projets_photos_4{
     opacity: 0.5;
-<<<<<<< HEAD
 	cursor: pointer;
 }
 
 .projets_01_title, .projets_02_title, .projets_03_title, .projets_04_title {
     margin-bottom: 10vmax;
 	cursor: pointer;
-=======
-}
-
-.projets_01_title{
-    margin-bottom: 10vmax;
->>>>>>> origin/gh-pages
 }
 
 .projets_title_main{
@@ -511,10 +491,7 @@ li {
 .p_one, .p_two, .p_three, .p_four{
   opacity: 0.5;  
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/gh-pages
 /* LEFT */
 
 .projets_left{
@@ -534,11 +511,7 @@ li {
     font-size: 1.5vmax;
 	font-weight: 900;
 	color: #6722f5;
-<<<<<<< HEAD
 	background-color: #fff;
-=======
-	background-color: #22fd8e;
->>>>>>> origin/gh-pages
     font-family: 'Raleway', sans-serif;
 }
 
@@ -579,7 +552,6 @@ li {
     margin-top: -1.5vmax;
 }
 
-<<<<<<< HEAD
 /* CHILD PROJECTS 01 */
 
 .wrapper_p_child_01{
@@ -676,8 +648,6 @@ li {
 }
 
 
-=======
->>>>>>> origin/gh-pages
 
 
 
