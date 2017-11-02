@@ -113,11 +113,17 @@ a{
 	font-weight: 700;	
 }
 
+.newsmore{
+    
+	font-size: 1vmax;
+	font-weight: 900;
+	text-decoration: underline;
+}
+
 .news_details{
 	grid-column: 5 / span 4;
     grid-row: 26 / span 1;
-    display: none;
-	
+    display: none;	
 }
 
 .news_scroll{
