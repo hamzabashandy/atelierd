@@ -100,7 +100,7 @@ a{
 .news{
 	grid-column: 5 / span 4;
     grid-row: 25 / span 1;
-	font-size: .9vmax;
+	font-size: 1vmax;
 	font-weight: 300;
 	font-family: 'Raleway', sans-serif;
 	color: #fff;
@@ -108,10 +108,45 @@ a{
 }
 
 .newsdate{
-	
-	font-size: .9vmax;
-	font-weight: 700;
+    
+	font-size: 1vmax;
+	font-weight: 700;	
+}
 
+.news_details{
+	grid-column: 5 / span 4;
+    grid-row: 26 / span 1;
+    display: none;
+	
+}
+
+.news_scroll{
+    position: fixed;
+	overflow-y: scroll;
+    font-size: .9vmax;
+	font-weight: 600;
+	font-family: 'Raleway', sans-serif;
+	color: #37003c;
+    background-color: #fff;
+	text-align: left;
+    padding: 1vmax 1vmax 1vmax 1vmax;
+    /*display: none;*/
+    opacity: .8;
+    width: 40%;
+    margin-left: 1.5%;
+    height: 48%;
+}
+
+#style-3::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #fff;
+    opacity: 0.8;
+}
+
+#style-3::-webkit-scrollbar-thumb
+{
+	background-color: #371e3e;
 }
 
 /*A PROPOS*/
@@ -139,8 +174,8 @@ a{
 .texttitle{
 	font-size: 1.4vmax;
 	font-weight: 900;
-	color: #37003c;
-	background: #22fd8e;
+	color: #6722f5;
+	background: #fff;
 	padding-right: 3px;
 
 }
@@ -176,7 +211,7 @@ a{
 	width: 55%;
 }
 
-/*EQUIPE*/
+/*EQUIPE PROFESSEURS*/
 
 .wrapper_equipe{
   display: grid;
@@ -201,11 +236,6 @@ a{
     grid-row: 25 / span 1;
 }
 
-.equipe_p_photos_4{
-	grid-column: 8 / span 1;
-    grid-row: 25 / span 1;
-}
-
 .equipe_p_title_1{
 	grid-column: 5 / span 1;
     grid-row: 26 / span 1;	
@@ -218,11 +248,6 @@ a{
 
 .equipe_p_title_3{
 	grid-column: 7 / span 1;
-    grid-row: 26 / span 1;	
-}
-
-.equipe_p_title_4{
-	grid-column: 8 / span 1;
     grid-row: 26 / span 1;	
 }
 
@@ -247,6 +272,11 @@ a{
 	cursor: pointer;
 }
 
+.equipe_p_text{
+	font-size: 1.2vmax;
+	font-weight: 700;
+}
+
 .equipe_p_text_1{
 	grid-column: 5 / span 4;
     grid-row: 27 / span 1;
@@ -262,9 +292,19 @@ a{
 	display: none;
 }
 
-.equipe_p_text{
-	font-size: 1.2vmax;
-	font-weight: 700;
+.equipe_p_text_2{
+	grid-column: 5 / span 4;
+    grid-row: 27 / span 1;
+	
+	font-size: .9vmax;
+	font-weight: 600;
+	line-height: 1.8vmax;
+	font-family: 'Raleway', sans-serif;
+	color: #fff;
+	text-align: justify;	
+	border-top: 1px solid white;
+	padding-top: 2vmax;
+	display: none;
 }
 
 .opacity {
@@ -272,46 +312,343 @@ a{
 	cursor: pointer;
 }
 
+
 .equipe_left{
 	grid-column: 2 / span 2;
     grid-row: 25 / span 1;
 	font-family: 'Raleway', sans-serif;
-	color: #fff;
+	/*color: #fff;*/
 	text-align: right;	
 	font-size: 1.4vmax;
 	font-weight: 900;
 }
 
-#equipe_left_title_p a{
+/*#equipe_left_title_p a{
+	color: #6722f5;
+	background-color: #fff;
+}*/
+
+/*#equipe_left_title_e a{
 	color: #fff;
-}
+}*/
 
 #equipe_left_title_e a{
+	opacity: 0.4;
 	color: #fff;
 }
 
-#equipe_left_title_e{
-	opacity: 0.4;
+#equipe_left_title_p a{
+	opacity: 1;
+	color: #fff;
 }
 
 li {
   list-style-type: none;
 }
 
+/*EQUIPE ETUDIANTS*/
 
-/*
-$( ".equipe_p_title_1" ).hover(function() {
-				$( this ).css('color', '#37003c');
-				$( this ).css('background-color', '#22fd8e');
-				$( ".equipe_p_photos_1_opacity" ).css('opacity', '0.5');
-			});
-			
-			$( ".equipe_p_title_1" ).mouseleave(function() {
-				$( this ).css('color', '#fff');
-				$( this ).css('background-color', '');
-				$( ".equipe_p_photos_1_opacity" ).css('opacity', '1');
-			});
-*/
+.equipe_e_title_main{	
+	font-size: 1.4vmax;
+	font-weight: 900;
+	font-family: 'Raleway', sans-serif;
+	color: #fff;
+	text-align: left;
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+.equipe_e_title_sec{	
+	font-size: .8vmax;
+	font-weight: 300;
+	font-family: 'Raleway', sans-serif;
+	color: #fff;
+	text-align: left;
+	font-style: italic;
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+.etudiant-hide{
+    display: none;
+}
+
+.equipe_e_title_main:hover + .equipe_e_title_sec {
+    opacity: 1;
+}
+
+.equipe_e_title_main:hover {
+    opacity: 1;
+}
+
+.etudiant_scroll{
+    display: grid;
+    
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1px;
+    grid-auto-rows: repeat (1, 150px);
+    width: 100%;
+    
+    grid-column: 5 / span 4;
+    grid-row: 25 / span 1;
+}
+
+.equipe_e_title_1{
+	grid-column: 1 / span 1;
+    grid-row: 1 / span 1;	
+    align-items:center;
+}
+
+.equipe_e_title_2{
+	grid-column: 2 / span 1;
+    grid-row: 1 / span 1;	
+}
+
+.equipe_e_title_3{
+	grid-column: 3 / span 1;
+    grid-row: 1 / span 1;	
+}
+
+.equipe_e_title_4{
+	grid-column: 4 / span 1;
+    grid-row: 1 / span 1;	
+}
+
+.equipe_e_title_5{
+	grid-column: 1 / span 1;
+    grid-row: 20 / span 1;	
+}
+
+.equipe_e_title_6{
+	grid-column: 2 / span 1;
+    grid-row: 20 / span 1;	
+}
+
+.equipe_e_title_7{
+	grid-column: 3 / span 1;
+    grid-row: 20 / span 1;	
+}
+
+.equipe_e_title_8{
+	grid-column: 4 / span 1;
+    grid-row: 20 / span 1;	
+}
+
+/* PROJETS */
+
+.wrapper_projets{
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-auto-rows: repeat (1, 50px);
+  grid-gap: .5vw .8vw;
+  display: none;
+  
+}
+
+/* RIGHT */
+
+.projets_right{
+    display: grid;
+    
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: .5vw .8vw;
+    grid-auto-rows: repeat (1, 50px);
+    width: 100%;
+    
+    grid-column: 5 / span 4;
+    grid-row: 25 / span 1;
+}
+
+.projets_photos_1, .projets_photos_2, .projets_photos_3, .projets_photos_4{
+    opacity: 0.5;
+	cursor: pointer;
+}
+
+.projets_01_title, .projets_02_title, .projets_03_title, .projets_04_title {
+    margin-bottom: 10vmax;
+	cursor: pointer;
+}
+
+.projets_title_main{
+    font-size: 1.4vmax;
+	font-weight: 900;
+	color: #fff;
+    font-family: 'Raleway', sans-serif;
+    
+}
+
+.projets_title_sec{	
+	font-size: .9vmax;
+	font-weight: 300;
+	font-family: 'Raleway', sans-serif;
+	color: #fff;
+	text-align: left;
+	font-style: italic;
+	opacity: 1;
+	cursor: pointer;
+}
+
+.p_one, .p_two, .p_three, .p_four{
+  opacity: 0.5;  
+}
+
+/* LEFT */
+
+.projets_left{
+    grid-column: 2 / span 2;
+    grid-row: 25 / span 1;
+}
+
+.projets_left_division{  
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: .5vw .8vw;
+    grid-auto-rows: repeat (1, 50px);
+
+}
+
+.projets_left_title{
+    font-size: 1.5vmax;
+	font-weight: 900;
+	color: #6722f5;
+	background-color: #fff;
+    font-family: 'Raleway', sans-serif;
+}
+
+.projets_left_text{
+    font-size: .9vmax;
+	font-weight: 600;
+	line-height: 1.8vmax;
+	font-family: 'Raleway', sans-serif;
+	color: #fff;
+	text-align: justify;	
+}
+
+.projets_left_01{
+    position: fixed;
+    width: 20%;
+    display: none;
+    margin-top: -1.5vmax;
+}
+
+.projets_left_02{
+    position: fixed;
+    width: 20%;
+    display: none;
+    margin-top: -1.5vmax;
+}
+
+.projets_left_03{
+    position: fixed;
+    width: 20%;
+    display: none;
+    margin-top: -1.5vmax;
+}
+
+.projets_left_04{
+    position: fixed;
+    width: 20%;
+    display: none;
+    margin-top: -1.5vmax;
+}
+
+/* CHILD PROJECTS 01 */
+
+.wrapper_p_child_01{
+	display: grid;
+  	grid-template-columns: repeat(9, 1fr);
+  	grid-auto-rows: repeat (1, 50px);
+  	grid-gap: .5vw .8vw;
+    display: none;
+}
+
+.p_child_01_right{
+	grid-column: 5 / span 4;
+    grid-row: 10 / span 1;
+}
+
+.p_child_01_scroll{
+    position: fixed;
+	overflow-y: scroll;
+    font-size: .9vmax;
+	font-weight: 600;
+	font-family: 'Raleway', sans-serif;
+	color: #37003c;
+    background-color: #fff;
+	text-align: left;
+    padding: 1vmax 1vmax 1vmax 1vmax;
+    /*display: none;*/
+    opacity: .8;
+    width: 40%;
+    margin-left: 1.5%;
+    height: 83%;
+}
+
+.info_card{
+	display: grid;
+  	grid-template-columns: repeat(4, 1fr);
+	grid-auto-rows: repeat (1, 25px);
+	background: #37003c;
+	color: #fff;
+	line-height: 1.5vmax;
+	padding: 1vmax;
+	margin-top: 0.5vmax;
+}
+
+.info_card_left{
+	grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.info_card_right{
+	grid-column: 2 / span 3;
+    grid-row: 1 / span 1;
+}
+
+.p_child_01_right_text{
+	margin-top: 1vmax;
+	text-align: justify;
+}
+
+
+.p_child_01_left{
+	grid-column: 3 / span 1;
+    grid-row: 26 / span 1;
+}
+
+.p_child_01_left_title{
+    font-size: 1.2vmax;
+	font-weight: 900;
+	color: #37003c;
+	background-color: #fff;
+    font-family: 'Raleway', sans-serif;
+	text-align: right;
+	padding-bottom: 1vmax;
+	border-bottom: 1px solid #37003c;
+	
+}
+
+#p_child_01_left_subtitle{
+	grid-column: 1 / span 3;
+	grid-row: 27 / span 1;
+}
+
+.p_child_01_left_subtitle{	
+    font-size: 1.1vmax;
+	font-weight: 300;
+	color: #37003c;
+	background-color: #fff;
+    font-family: 'Raleway', sans-serif;
+	text-align: right;
+}
+
+.p_child_01_left_subtitle_01{	
+    font-size: 1.8vmax;
+	font-weight: 900;
+}
+
+
+
 
 
 @media screen and (max-width: 768px) {
